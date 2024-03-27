@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JIKLY\\source\\repos\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj": {}
+    "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj": {}
   },
   "projects": {
-    "C:\\Users\\JIKLY\\source\\repos\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj": {
+    "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JIKLY\\source\\repos\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj",
+        "projectUniqueName": "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj",
         "projectName": "практика дз(Переводчик)",
-        "projectPath": "C:\\Users\\JIKLY\\source\\repos\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj",
+        "projectPath": "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj",
         "packagesPath": "C:\\Users\\JIKLY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JIKLY\\source\\repos\\практика дз(Переводчик)\\практика дз(Переводчик)\\obj\\",
+        "outputPath": "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JIKLY\\AppData\\Roaming\\NuGet\\NuGet.Config",

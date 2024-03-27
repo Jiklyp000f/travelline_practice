@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("практика дз(Переводчик)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12f792344739d9f69840692d3e19a22ed913c774")]
 [assembly: System.Reflection.AssemblyProductAttribute("практика дз(Переводчик)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("практика дз(Переводчик)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
