@@ -9,7 +9,7 @@ while (balance > 0)
     while (stavka <= 0 | stavka > balance)
     {
         Console.WriteLine("Введите ставку: ");
-        stavka = Convert.ToInt32(Console.ReadLine());
+        stavka = Convert.ToInt64(Console.ReadLine());
     }
     int randomNumber = random.Next(0, 21);
     int multiplicator = random.Next(1, 5);

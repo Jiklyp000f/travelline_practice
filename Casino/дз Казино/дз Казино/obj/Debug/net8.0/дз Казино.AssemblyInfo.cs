@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("дз Казино")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aac732bb51bc7d85f35c0e04f088f1dd5a2aae74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5599f4a6733b3905f1f73b66f0164aa82fdeab07")]
 [assembly: System.Reflection.AssemblyProductAttribute("дз Казино")]
 [assembly: System.Reflection.AssemblyTitleAttribute("дз Казино")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

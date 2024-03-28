@@ -14,15 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -30,8 +26,8 @@
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\travelline_practice\\Casino\\\u0434\u0437 \u041A\u0430\u0437\u0438\u043D\u043E\\\u0434\u0437 \u041A\u0430\u0437\u0438\u043D\u043E\\Program.cs",
               "RelativeDocumentMoniker": "\u0434\u0437 \u041A\u0430\u0437\u0438\u043D\u043E\\Program.cs",
-              "ToolTip": "D:\\travelline_practice\\Casino\\\u0434\u0437 \u041A\u0430\u0437\u0438\u043D\u043E\\\u0434\u0437 \u041A\u0430\u0437\u0438\u043D\u043E\\Program.cs",
-              "RelativeToolTip": "\u0434\u0437 \u041A\u0430\u0437\u0438\u043D\u043E\\Program.cs",
+              "ToolTip": "D:\\travelline_practice\\Casino\\\u0434\u0437 \u041A\u0430\u0437\u0438\u043D\u043E\\\u0434\u0437 \u041A\u0430\u0437\u0438\u043D\u043E\\Program.cs*",
+              "RelativeToolTip": "\u0434\u0437 \u041A\u0430\u0437\u0438\u043D\u043E\\Program.cs*",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T09:20:50.589Z",
