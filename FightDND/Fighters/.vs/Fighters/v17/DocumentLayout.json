@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\JIKLY\\source\\repos\\Fighters\\",
+  "WorkspaceRootPath": "D:\\travelline_practice\\FightDND\\Fighters\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|c:\\users\\jikly\\source\\repos\\fighters\\fighters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|c:\\users\\jikly\\source\\repos\\fighters\\fighters\\iweapon\\noweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\iweapon\\noweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\iweapon\\noweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|c:\\users\\jikly\\source\\repos\\fighters\\fighters\\iarmor\\noarmor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\iarmor\\noarmor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\iarmor\\noarmor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|c:\\users\\jikly\\source\\repos\\fighters\\fighters\\ifighter\\ifighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\ifighter\\ifighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\ifighter\\ifighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -36,50 +36,47 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "NoWeapon.cs",
-              "DocumentMoniker": "C:\\Users\\JIKLY\\source\\repos\\Fighters\\Fighters\\IWeapon\\NoWeapon.cs",
+              "DocumentMoniker": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IWeapon\\NoWeapon.cs",
               "RelativeDocumentMoniker": "Fighters\\IWeapon\\NoWeapon.cs",
-              "ToolTip": "C:\\Users\\JIKLY\\source\\repos\\Fighters\\Fighters\\IWeapon\\NoWeapon.cs",
+              "ToolTip": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IWeapon\\NoWeapon.cs",
               "RelativeToolTip": "Fighters\\IWeapon\\NoWeapon.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T20:28:59.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T20:28:59.626Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "NoArmor.cs",
-              "DocumentMoniker": "C:\\Users\\JIKLY\\source\\repos\\Fighters\\Fighters\\IArmor\\NoArmor.cs",
+              "DocumentMoniker": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IArmor\\NoArmor.cs",
               "RelativeDocumentMoniker": "Fighters\\IArmor\\NoArmor.cs",
-              "ToolTip": "C:\\Users\\JIKLY\\source\\repos\\Fighters\\Fighters\\IArmor\\NoArmor.cs",
+              "ToolTip": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IArmor\\NoArmor.cs",
               "RelativeToolTip": "Fighters\\IArmor\\NoArmor.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T20:28:20.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T20:28:20.376Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "IFighter.cs",
-              "DocumentMoniker": "C:\\Users\\JIKLY\\source\\repos\\Fighters\\Fighters\\IFighter\\IFighter.cs",
+              "DocumentMoniker": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IFighter\\IFighter.cs",
               "RelativeDocumentMoniker": "Fighters\\IFighter\\IFighter.cs",
-              "ToolTip": "C:\\Users\\JIKLY\\source\\repos\\Fighters\\Fighters\\IFighter\\IFighter.cs",
+              "ToolTip": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IFighter\\IFighter.cs",
               "RelativeToolTip": "Fighters\\IFighter\\IFighter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T20:24:58.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T20:24:58.843Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\JIKLY\\source\\repos\\Fighters\\Fighters\\Program.cs",
+              "DocumentMoniker": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\Program.cs",
               "RelativeDocumentMoniker": "Fighters\\Program.cs",
-              "ToolTip": "C:\\Users\\JIKLY\\source\\repos\\Fighters\\Fighters\\Program.cs",
+              "ToolTip": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\Program.cs",
               "RelativeToolTip": "Fighters\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAcAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAEAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-02T20:13:05.833Z",
               "EditorCaption": ""
