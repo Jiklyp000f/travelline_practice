@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\travelline_practice\\Casino\\дз Казино\\дз Казино\\дз Казино.csproj",
-      "projectName": "дз Казино",
-      "projectPath": "D:\\travelline_practice\\Casino\\дз Казино\\дз Казино\\дз Казино.csproj",
+      "projectUniqueName": "D:\\travelline_practice\\Casino\\дз Казино\\дз Казино\\Homework_Casino.csproj",
+      "projectName": "Homework_Casino",
+      "projectPath": "D:\\travelline_practice\\Casino\\дз Казино\\дз Казино\\Homework_Casino.csproj",
       "packagesPath": "C:\\Users\\JIKLY\\.nuget\\packages\\",
       "outputPath": "D:\\travelline_practice\\Casino\\дз Казино\\дз Казино\\obj\\",
       "projectStyle": "PackageReference",
