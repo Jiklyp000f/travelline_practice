@@ -1,26 +1,26 @@
 ﻿int balance = 10000;
 Random random = new Random();
 Console.WriteLine($"Добро пожаловать в ИГРУ! Ваш счёт составляет {balance} у.е. Приятной игры!");
-int stavka;
 while (balance > 0)
 {
     Console.WriteLine("Введите ставку: ");
-    stavka = Convert.ToInt32(Console.ReadLine());
-    while (stavka <= 0 | stavka > balance)
+    var input = Console.ReadLine();
+    int bet;
+    if (!int.TryParse(input, out bet) || bet < 1 || bet > balance)
     {
-        Console.WriteLine("Введите ставку: ");
-        stavka = Convert.ToInt64(Console.ReadLine());
+        Console.WriteLine($"Некорректное значение! Пожалуйста, введите допустимую ставку(Она не должна быть больше {balance} y.e. и не меньше нуля)."); ;
+        continue;
     }
     int randomNumber = random.Next(0, 21);
     int multiplicator = random.Next(1, 5);
     if (randomNumber > 0 & randomNumber < 18)
     {
-        balance = balance - stavka;
+        balance = balance - bet;
         Console.WriteLine($"Вы проиграли! Ваш баланс составляет {balance} у.е.");
     }
     else
     {
-        balance = balance + (stavka * (1 + (multiplicator * randomNumber % 17)));
+        balance = balance + (bet * (1 + (multiplicator * randomNumber % 17)));
         Console.WriteLine($"Вы ВЫИГРАЛИ! Ваш баланс составляет {balance} у.е");
     }
 }
