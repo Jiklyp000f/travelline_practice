@@ -6,8 +6,8 @@
     "3. Изменить перевод русского слова\n" +
     "4. Перевести русское слово на английский\n" +
     "5. Выход");
-    char znachenie = Convert.ToChar(Console.ReadLine());
-    switch (znachenie)
+    char z = Convert.ToChar(Console.ReadLine());
+    switch (z)
     {
         case '1':
             Console.WriteLine("Добавить перевод:");

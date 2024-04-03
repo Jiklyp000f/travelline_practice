@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("практика дз(Переводчик)")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("practicHomework1(Translator)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+668669eeae84e728a0961b03e922e401f6a8aa16")]
-[assembly: System.Reflection.AssemblyProductAttribute("практика дз(Переводчик)")]
-[assembly: System.Reflection.AssemblyTitleAttribute("практика дз(Переводчик)")]
+[assembly: System.Reflection.AssemblyProductAttribute("practicHomework1(Translator)")]
+[assembly: System.Reflection.AssemblyTitleAttribute("practicHomework1(Translator)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

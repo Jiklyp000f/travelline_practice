@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj",
-      "projectName": "практика дз(Переводчик)",
-      "projectPath": "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\практика дз(Переводчик).csproj",
+      "projectUniqueName": "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\practicHomework1(Translator).csproj",
+      "projectName": "practicHomework1(Translator)",
+      "projectPath": "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\practicHomework1(Translator).csproj",
       "packagesPath": "C:\\Users\\JIKLY\\.nuget\\packages\\",
       "outputPath": "D:\\travelline_practice\\Homework1\\практика дз(Переводчик)\\практика дз(Переводчик)\\obj\\",
       "projectStyle": "PackageReference",
