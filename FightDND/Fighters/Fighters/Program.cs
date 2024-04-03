@@ -11,9 +11,9 @@ namespace Fighters
     {
         public static void Main()
         {
-           
-            var firstFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor());
-            var secondFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor());
+
+            var firstFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor(), GetClasses());
+            var secondFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor(), GetClasses());
 
             var master = new GameMaster();
             var winner = master.PlayAndGetWinner(firstFighter, secondFighter);
@@ -96,6 +96,34 @@ namespace Fighters
 
         }
 
+        public static IClasses GetClasses()
+        {
+            Console.WriteLine("Введите класс(разбойник, воин): ");
+
+            string? classes = Console.ReadLine().ToLower();
+            if (string.IsNullOrEmpty(classes))
+            {
+                Console.WriteLine("Неверный выбор класса, введите заного");
+
+                GetClasses();
+            }
+            return EnterClasses(classes);
+        }
+
+        private static IClasses EnterClasses(string Classes)
+        {
+            switch (Classes)
+            {
+                case "разбойник":
+                    return new Rogue();
+                case "воин":
+                    return new Warrior();
+                default:
+                    return new NoClasses();
+            }
+
+        }
+
         public static IWeapon GetWeapon()
         {
             Console.WriteLine("Выберите оружие(нож, меч): ");
@@ -123,6 +151,8 @@ namespace Fighters
             }
 
         }
+
+
     }
 
     public class GameMaster

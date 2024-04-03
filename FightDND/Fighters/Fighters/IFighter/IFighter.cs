@@ -2,6 +2,7 @@
 using Fighters.Models.Armors;
 using Fighters.Models.Races;
 using Fighters.Models.Weapons;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Fighters.Models.Fighters
 {
@@ -14,6 +15,7 @@ namespace Fighters.Models.Fighters
 
         public IWeapon Weapon { get; }
         public IRace Race { get; }
+        public IClasses Classing { get; }
         public IArmor Armor { get; }
 
         public void TakeDamage(int damage);

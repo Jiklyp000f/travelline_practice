@@ -1,4 +1,5 @@
 ﻿
+using Fighters;
 using Fighters.Models.Armors;
 using Fighters.Models.Fighters;
 using Fighters.Models.Races;
@@ -13,20 +14,22 @@ public class Fighter : IFighter
     public string Name { get; }
 
     public IRace Race { get; }
+    public IClasses Classing { get; }
     public IWeapon Weapon { get;}
     public IArmor Armor { get;}
 
-    public Fighter(string name, IRace race, IWeapon weapon, IArmor armor)
+    public Fighter(string name, IRace race, IWeapon weapon, IArmor armor, IClasses classes)
     {
         Name = name;
         Race = race;
         Weapon = weapon;
         Armor = armor;
-        CurrentHealth = MaxHealth + Armor.Armor;
+        Classing = classes;
+        CurrentHealth = MaxHealth  + Classing.Armor + Armor.Armor;
     }
     public int CalculateDamage()
     {
-        return Race.Damage + Weapon.Damage;
+        return Race.Damage + Classing.Damage + Weapon.Damage ;
     }
 
     public void TakeDamage(int damage)
