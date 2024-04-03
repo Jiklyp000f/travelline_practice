@@ -1,7 +1,9 @@
-﻿using Fighters.Models.Fighters;
+﻿using Fighters.Models.Armors;
+using Fighters.Models.Fighters;
 using Fighters.Models.Races;
 using Fighters.Models.Weapons;
 using System.Diagnostics;
+using System.Net.Security;
 
 namespace Fighters
 {
@@ -10,8 +12,8 @@ namespace Fighters
         public static void Main()
         {
            
-            var firstFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon());
-            var secondFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon());
+            var firstFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor());
+            var secondFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor());
 
             var master = new GameMaster();
             var winner = master.PlayAndGetWinner(firstFighter, secondFighter);
@@ -33,10 +35,41 @@ namespace Fighters
 
             return fighterName;
         }
+        public static IArmor GetArmor()
+        {
+            Console.WriteLine("Введите броню(латы, кожа, кольчуга, ткань): ");
+
+            string? armor = Console.ReadLine().ToLower();
+            if (string.IsNullOrEmpty(armor))
+            {
+                Console.WriteLine("Неверный выбор брони, введите заного");
+
+                GetRace();
+            }
+            return GetArmor(armor);
+        }
+        
+        private static IArmor GetArmor(string Armor)
+        {
+            switch (Armor)
+            {
+                case "латы":
+                    return new Patches();
+                case "кожа":
+                    return new LeatherArmor();
+                case "кольчуга":
+                    return new ChainArmor();
+                case "ткань":
+                    return new FabricArmor();
+                default:
+                    return new NoArmor();
+            }
+
+        }
 
         public static IRace GetRace()
         {
-            Console.WriteLine("Введите расу: ");
+            Console.WriteLine("Введите расу(человек, эльф, орк): ");
 
             string? race = Console.ReadLine().ToLower();
             if (string.IsNullOrEmpty(race))
@@ -51,11 +84,11 @@ namespace Fighters
         {
             switch (Race)
             {
-                case "human":
+                case "человек":
                     return new Human();
-                case "orc":
+                case "орк":
                     return new Orc();
-                case "elf":
+                case "эльф":
                     return new Elf(); 
                 default:
                     return new Human();
@@ -65,7 +98,7 @@ namespace Fighters
 
         public static IWeapon GetWeapon()
         {
-            Console.WriteLine("Выберите оружие: ");
+            Console.WriteLine("Выберите оружие(нож, меч): ");
             string? weapon = Console.ReadLine().ToLower();
             if (string.IsNullOrEmpty(weapon))
             {
@@ -79,11 +112,11 @@ namespace Fighters
         {
             switch (Weapon) 
             {
-                case "knife":
+                case "нож":
                     return new Knife();
                 case "noweapon":
                     return new NoWeapon();
-                case "sword":
+                case "меч":
                     return new Sword();
                 default:
                     return new NoWeapon();
