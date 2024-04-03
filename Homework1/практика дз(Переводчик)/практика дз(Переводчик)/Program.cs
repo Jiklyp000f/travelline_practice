@@ -1,30 +1,124 @@
-﻿while (true)
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+
+class Translator
 {
-    Console.WriteLine("Выберите одну из команд(от 1 до 5):\n" +
-    "1. Добавить перевод\n" +
-    "2. Удалить перевод русского слова\n" +
-    "3. Изменить перевод русского слова\n" +
-    "4. Перевести русское слово на английский\n" +
-    "5. Выход");
-    char z = Convert.ToChar(Console.ReadLine());
-    switch (z)
+    private Dictionary<string, string> translations;
+
+    public Translator()
     {
-        case '1':
-            Console.WriteLine("Добавить перевод:");
-            break;
-        case '2':
-            Console.WriteLine("Удалить перевод русского слова:");
-            break;
-        case '3':
-            Console.WriteLine("Изменить перевод русского слова: ");
-            break;
-        case '4':
-            Console.WriteLine("Перевод: ");
-            break;
-        case '5': 
-            return;
-        default:
-            Console.WriteLine("Неверное значение!");
-            break;
+        translations = new Dictionary<string, string>();
+    }
+
+    public void Run()
+    {
+        Console.WriteLine("=== Переводчик ===");
+
+        while (true)
+        {
+            Console.WriteLine("\nМеню: \n"+
+           "1. Добавить перевод\n" +
+            "2. Удалить перевод\n" +
+           "3. Изменить перевод\n" +
+            "4. Перевести слово\n" +
+            "5. Выйти");
+
+            Console.Write("Выберите команду: ");
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    AddTranslation();
+                    break;
+                case "2":
+                    RemoveTranslation();
+                    break;
+                case "3":
+                    ChangeTranslation();
+                    break;
+                case "4":
+                    Translate();
+                    break;
+                case "5":
+                    return;
+                default:
+                    Console.WriteLine("Неверная команда. Попробуйте еще раз.");
+                    continue;
+            }
+        }
+    }
+
+    private void AddTranslation()
+    {
+        Console.Write("Введите слово на русском: ");
+        string word = Console.ReadLine();
+
+        Console.Write("Введите перевод на английском: ");
+        string translation = Console.ReadLine();
+
+        translations[word] = translation;
+
+        Console.WriteLine("Перевод добавлен.");
+    }
+
+    private void RemoveTranslation()
+    {
+        Console.Write("Введите слово на русском для удаления перевода: ");
+        string word = Console.ReadLine();
+
+        if (translations.Remove(word))
+        {
+            Console.WriteLine("Перевод удален.");
+        }
+        else
+        {
+            Console.WriteLine("Перевод для указанного слова не найден.");
+        }
+    }
+
+    private void ChangeTranslation()
+    {
+        Console.Write("Введите слово на русском для изменения перевода: ");
+        string word = Console.ReadLine();
+
+        if (translations.ContainsKey(word))
+        {
+            Console.Write("Введите новый перевод на английском: ");
+            string newTranslation = Console.ReadLine();
+
+            translations[word] = newTranslation;
+
+            Console.WriteLine("Перевод изменен.");
+        }
+        else
+        {
+            Console.WriteLine("Перевод для указанного слова не найден.");
+        }
+    }
+
+    private void Translate()
+    {
+        Console.Write("Введите слово на русском для перевода: ");
+        string word = Console.ReadLine();
+
+        if (translations.TryGetValue(word, out string translation))
+        {
+            Console.WriteLine($"Перевод: {translation}");
+        }
+        else
+        {
+            Console.WriteLine("Перевод для указанного слова не найден.");
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Translator translator = new Translator();
+        translator.Run();
     }
 }
