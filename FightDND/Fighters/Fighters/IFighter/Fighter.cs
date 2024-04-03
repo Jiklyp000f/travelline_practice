@@ -16,10 +16,11 @@ public class Fighter : IFighter
     public IWeapon Weapon { get; private set; } = new NoWeapon();
     public IArmor Armor { get; private set; } = new NoArmor();
 
-    public Fighter(string name, IRace race)
+    public Fighter(string name, IRace race, IWeapon weapon)
     {
         Name = name;
         Race = race;
+        Weapon = weapon;
         CurrentHealth = MaxHealth;
     }
 
