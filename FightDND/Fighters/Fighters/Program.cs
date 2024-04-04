@@ -186,7 +186,8 @@ namespace Fighters
 
         private bool FightAndCheckIfOpponentDead(IFighter roundOwner, IFighter opponent)
         {
-            int damage = roundOwner.CalculateDamage();
+            int damage = roundOwner.CalculateDamage() - roundOwner.CalculateProtect();
+            if (damage < 1) damage = 0;
             opponent.TakeDamage(damage);
 
             Console.WriteLine(

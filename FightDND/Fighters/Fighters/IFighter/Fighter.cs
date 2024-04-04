@@ -7,18 +7,15 @@ using Fighters.Models.Weapons;
 
 public class Fighter : IFighter
 {
-    
+
     public int MaxHealth => Race.Health + Classing.Health;
     public int CurrentHealth { get; private set; }
-
     public string Name { get; }
-
     public string FullName => $"{Name} - {Race.Name} {Classing.Name}";
-
     public IRace Race { get; }
     public IClasses Classing { get; }
-    public IWeapon Weapon { get;}
-    public IArmor Armor { get;}
+    public IWeapon Weapon { get; }
+    public IArmor Armor { get; }
 
     public Fighter(string name, IRace race, IWeapon weapon, IArmor armor, IClasses classes)
     {
@@ -27,12 +24,17 @@ public class Fighter : IFighter
         Weapon = weapon;
         Armor = armor;
         Classing = classes;
-        CurrentHealth = MaxHealth  + Classing.Armor + Armor.Armor;
+        CurrentHealth = MaxHealth;
     }
 
     public int CalculateDamage()
     {
-        return Race.Damage + Classing.Damage + Weapon.Damage ;
+        return Race.Damage + Classing.Damage + Weapon.Damage;
+    }
+
+    public int CalculateProtect()
+    {
+        return Race.Armor + Classing.Armor + Armor.Armor;
     }
 
     public void TakeDamage(int damage)
