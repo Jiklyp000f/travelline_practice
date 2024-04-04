@@ -8,10 +8,12 @@ using Fighters.Models.Weapons;
 public class Fighter : IFighter
 {
     
-    public int MaxHealth => Race.Health;
+    public int MaxHealth => Race.Health + Classing.Health;
     public int CurrentHealth { get; private set; }
 
     public string Name { get; }
+
+    public string FullName => $"{Name} - {Race.Name} {Classing.Name}";
 
     public IRace Race { get; }
     public IClasses Classing { get; }
@@ -27,6 +29,7 @@ public class Fighter : IFighter
         Classing = classes;
         CurrentHealth = MaxHealth  + Classing.Armor + Armor.Armor;
     }
+
     public int CalculateDamage()
     {
         return Race.Damage + Classing.Damage + Weapon.Damage ;

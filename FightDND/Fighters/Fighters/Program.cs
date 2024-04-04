@@ -13,7 +13,9 @@ namespace Fighters
         {
 
             var firstFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor(), GetClasses());
+            Console.WriteLine($"\nПервый боец: {firstFighter.FullName}\n");
             var secondFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor(), GetClasses());
+            Console.WriteLine($"\nВторой боец: {secondFighter.FullName}\n");
 
             var master = new GameMaster();
             var winner = master.PlayAndGetWinner(firstFighter, secondFighter);

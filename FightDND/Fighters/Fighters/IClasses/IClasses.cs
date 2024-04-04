@@ -1,6 +1,6 @@
 ﻿namespace Fighters
 {
-    public interface IClasses //Провести инициализация с расой
+    public interface IClasses
     {
         int Armor { get; }
         int Damage { get; }
