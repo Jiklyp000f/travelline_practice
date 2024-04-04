@@ -162,8 +162,10 @@ namespace Fighters
         public IFighter PlayAndGetWinner(IFighter firstFighter, IFighter secondFighter)
         {
             int round = 1;
+            Console.WriteLine("Нажмите Enter для начала боя");
             while (true)
             {
+                Console.ReadLine();
                 Console.WriteLine($"Раунд {round++}.");
 
                 // First fights second
@@ -178,7 +180,7 @@ namespace Fighters
                     return secondFighter;
                 }
 
-                Console.WriteLine();
+                Console.WriteLine("\nНажмите Enter для перехода в следующий раунд\n");
             }
 
             throw new UnreachableException();
