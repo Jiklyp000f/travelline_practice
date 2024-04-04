@@ -3,6 +3,8 @@
     public interface IArmor
     {
         int Armor { get; }
+
+        int Health {  get; }
     }
 }
 

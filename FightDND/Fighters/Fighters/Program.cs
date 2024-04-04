@@ -159,6 +159,7 @@ namespace Fighters
 
     public class GameMaster
     {
+        private int BattleRage;
         public IFighter PlayAndGetWinner(IFighter firstFighter, IFighter secondFighter)
         {
             int round = 1;
@@ -166,7 +167,9 @@ namespace Fighters
             while (true)
             {
                 Console.ReadLine();
-                Console.WriteLine($"Раунд {round++}.");
+                Console.WriteLine($"Раунд {round++}.\n" +
+                    $"Ярость бойцов увеличивает их урон на {round}");
+                BattleRage = round;
 
                 // First fights second
                 if (FightAndCheckIfOpponentDead(firstFighter, secondFighter))
@@ -190,10 +193,10 @@ namespace Fighters
         {
             int damage = roundOwner.CalculateDamage() - opponent.CalculateProtect();
             if (damage < 1) damage = 1;
-            opponent.TakeDamage(damage);
+            opponent.TakeDamage(damage + BattleRage);
 
             Console.WriteLine(
-                $"Боец {opponent.Name} получает {damage} урона. " +
+                $"Боец {opponent.Name} получает {damage + BattleRage} урона. " +
                 $"Количество жизней: {opponent.CurrentHealth}");
 
             return opponent.CurrentHealth < 1;
