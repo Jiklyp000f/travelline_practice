@@ -2,6 +2,7 @@
 using Fighters.Models.Fighters;
 using Fighters.Models.Races;
 using Fighters.Models.Weapons;
+using System;
 using System.Diagnostics;
 using System.Net.Security;
 
@@ -193,13 +194,21 @@ namespace Fighters
         {
             int damage = roundOwner.CalculateDamage() - opponent.CalculateProtect();
             if (damage < 1) damage = 1;
+            EvaidRandom();
+
             opponent.TakeDamage(damage + BattleRage);
 
             Console.WriteLine(
-                $"Боец {opponent.Name} получает {damage + BattleRage} урона. " +
+                $"Боец {opponent.Name} получает {damage + BattleRage} урона. \n" +
                 $"Количество жизней: {opponent.CurrentHealth}");
 
             return opponent.CurrentHealth < 1;
+        }
+        public int EvaidRandom() //закончить работу над уклонениями
+        {
+            Random random = new Random();
+            int Evasion = random.Next(0, 11);
+            return Evasion;
         }
     }
 }

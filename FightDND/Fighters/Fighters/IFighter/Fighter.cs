@@ -9,6 +9,7 @@ public class Fighter : IFighter
 {
 
     public int MaxHealth => Race.Health + Classing.Health + Armor.Health;
+    public int Evaid => Race.Evasion;
     public int CurrentHealth { get; private set; }
     public string Name { get; }
     public string FullName => $"{Name} - {Race.Name} {Classing.Name}";
