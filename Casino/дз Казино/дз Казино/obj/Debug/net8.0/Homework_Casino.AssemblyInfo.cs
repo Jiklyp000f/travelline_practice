@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Homework_Casino")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f2ed8b78cd46355631af1e578cdc3aea9b94672")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+619ed3edb1b7c18ea72521160042230ade53f4c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Homework_Casino")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Homework_Casino")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
