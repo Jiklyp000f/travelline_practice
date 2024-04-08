@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\travelline_practice\\FightDND\\Fighters\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\irace\\orc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\irace\\orc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\irace\\human.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\irace\\human.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\irace\\elf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\irace\\elf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\ifighter\\fighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\ifighter\\fighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\ifighter\\ifighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\ifighter\\ifighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\ifighter\\fighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\ifighter\\fighter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\irace\\human.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\irace\\human.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\irace\\elf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\irace\\elf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|d:\\travelline_practice\\fightdnd\\fighters\\fighters\\irace\\orc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B4EED06-B9EB-430B-8418-C3B890C0CF6A}|Fighters\\Fighters.csproj|solutionrelative:fighters\\irace\\orc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Fighter.cs",
               "DocumentMoniker": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IFighter\\Fighter.cs",
               "RelativeDocumentMoniker": "Fighters\\IFighter\\Fighter.cs",
               "ToolTip": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IFighter\\Fighter.cs",
               "RelativeToolTip": "Fighters\\IFighter\\Fighter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAfAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAcwAsAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T09:10:17.52Z",
               "IsPinned": true,
@@ -52,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "IFighter.cs",
               "DocumentMoniker": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IFighter\\IFighter.cs",
               "RelativeDocumentMoniker": "Fighters\\IFighter\\IFighter.cs",
@@ -72,15 +72,19 @@
               "RelativeDocumentMoniker": "Fighters\\Program.cs",
               "ToolTip": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\Program.cs",
               "RelativeToolTip": "Fighters\\Program.cs",
-              "ViewState": "AQIAAMEAAAAAAAAAAAAwwM4AAABDAAAA",
+              "ViewState": "AQIAALYAAAAAAAAAAAAiwMYAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T10:33:54.441Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Elf.cs",
               "DocumentMoniker": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IRace\\Elf.cs",
               "RelativeDocumentMoniker": "Fighters\\IRace\\Elf.cs",
@@ -93,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Human.cs",
               "DocumentMoniker": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IRace\\Human.cs",
               "RelativeDocumentMoniker": "Fighters\\IRace\\Human.cs",
@@ -106,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Orc.cs",
               "DocumentMoniker": "D:\\travelline_practice\\FightDND\\Fighters\\Fighters\\IRace\\Orc.cs",
               "RelativeDocumentMoniker": "Fighters\\IRace\\Orc.cs",
@@ -116,10 +120,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T11:51:29.078Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             }
           ]
         }
