@@ -5,6 +5,7 @@
         public int Armor { get; } = 2;
         public int Damage { get; } = 12;
         public int Health { get; } = 23;
+        public int Evasion => 15;
         public string Name { get; } = "Разбойник";
     }
 }

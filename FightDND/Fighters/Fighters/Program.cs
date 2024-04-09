@@ -192,9 +192,24 @@ namespace Fighters
 
         private bool FightAndCheckIfOpponentDead(IFighter roundOwner, IFighter opponent)
         {
+          
+            int evasionChance = opponent.Evasion + EvaidRandom();
+            if (evasionChance > 100) 
+            {
+                evasionChance = 100;
+            }
+
             int damage = roundOwner.CalculateDamage() - opponent.CalculateProtect();
             if (damage < 1) damage = 1;
-            EvaidRandom();
+
+          
+            if (evasionChance >= 100)
+            {
+                Console.WriteLine(
+                $"Боец {opponent.Name} уклоняется от атаки!\n" +
+                $"Количество жизней: {opponent.CurrentHealth}");
+                return false; 
+            }
 
             opponent.TakeDamage(damage + BattleRage);
 
@@ -204,10 +219,10 @@ namespace Fighters
 
             return opponent.CurrentHealth < 1;
         }
-        public int EvaidRandom() //закончить работу над уклонениями
+        public int EvaidRandom()
         {
             Random random = new Random();
-            int Evasion = random.Next(0, 11);
+            int Evasion = random.Next(0, 101);
             return Evasion;
         }
     }
