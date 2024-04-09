@@ -42,7 +42,7 @@ public class Fighter : IFighter
     {
         CurrentHealth -= damage;
         if (CurrentHealth < 0)
-        {
+        { 
             CurrentHealth = 0;
         }
     }

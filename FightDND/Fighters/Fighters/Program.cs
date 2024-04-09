@@ -8,7 +8,7 @@ using System.Net.Security;
 
 namespace Fighters
 {
-    public class Program
+    public class Program 
     {
         public static void Main()
         {

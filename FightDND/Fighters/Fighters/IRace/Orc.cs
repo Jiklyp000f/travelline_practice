@@ -6,5 +6,5 @@ public class Orc : IRace
     int IRace.Damage => 15;
     int IRace.Health => 100;
     int IRace.Evasion => 3;
-    string IRace.Name { get; } = "Орк";
+    string IRace.Name { get; } = "Орк"; 
 }
