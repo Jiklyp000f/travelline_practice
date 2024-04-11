@@ -11,6 +11,7 @@ namespace Fighters.Models.Fighters
         public int CurrentHealth { get; }
         public int Evasion { get; }
         public string Name { get; }
+        public string FullName { get; }
 
         public IWeapon Weapon { get; }
         public IRace Race { get; }

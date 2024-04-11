@@ -10,49 +10,81 @@ namespace Fighters
     {
         public static void Main()
         {
+            List<IFighter> fighters = new List<IFighter>();
 
-            var firstFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor(), GetClasses());
-            Console.WriteLine($"\nПервый боец: {firstFighter.FullName}\n");
-            var secondFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor(), GetClasses());
-            Console.WriteLine($"\nВторой боец: {secondFighter.FullName}\n");
+            // Запрашиваем количество бойцов
+            Console.WriteLine("Введите количество бойцов: ");
+            int numFighters;
+            while (!int.TryParse(Console.ReadLine(), out numFighters) || numFighters < 2)
+            {
+                Console.WriteLine("Пожалуйста, введите корректное число (минимум 2): ");
+            }
 
+            // Создаем бойцов
+            for (int i = 0; i < numFighters; i++)
+            {
+                Console.WriteLine($"\nСоздание бойца {i + 1}:");
+                fighters.Add(CreateFighter());
+            }
+
+            // Отображаем информацию о бойцах
+            Console.WriteLine("\nБойцы:");
+            foreach (var fighter in fighters)
+            {
+                Console.WriteLine($"{fighter.FullName}");
+            }
+
+
+            // Начинаем бой
             var master = new GameMaster();
-            var winner = master.PlayAndGetWinner(firstFighter, secondFighter);
+            var winner = master.PlayAndGetWinner(fighters[0], fighters[1]);
 
-            Console.WriteLine($"Выигрывает  {winner.Name}");
+            Console.WriteLine($"\nПобедитель: {winner.Name}");
         }
+
+        public static IFighter CreateFighter()
+        {
+            Console.WriteLine("Введите данные бойца:");
+
+            string name = GetFighterName();
+            IRace race = GetRace();
+            IWeapon weapon = GetWeapon();
+            IArmor armor = GetArmor();
+            IClasses classes = GetClasses();
+
+            return new Fighter(name, race, weapon, armor, classes);
+        }
+
         public static string GetFighterName()
         {
             Console.WriteLine("Введите имя бойца: ");
 
-            string? fighterName = Console.ReadLine();
-
+            string fighterName = Console.ReadLine();
             if (string.IsNullOrEmpty(fighterName))
             {
-                Console.WriteLine("Неверное имя бойца, введите заного: ");
-
-                GetFighterName();
+                Console.WriteLine("Некорректное имя, попробуйте снова: ");
+                return GetFighterName();
             }
 
             return fighterName;
         }
+
         public static IArmor GetArmor()
         {
-            Console.WriteLine("Введите броню(латы, кожа, кольчуга, ткань): ");
+            Console.WriteLine("Выберите броню (латы, кожа, кольчуга, ткань): ");
 
-            string? armor = Console.ReadLine().ToLower();
+            string armor = Console.ReadLine().ToLower();
             if (string.IsNullOrEmpty(armor))
             {
-                Console.WriteLine("Неверный выбор брони, введите заного");
-
-                GetArmor();
+                Console.WriteLine("Некорректный выбор брони, попробуйте снова: ");
+                return GetArmor();
             }
-            return GetArmor(armor);
+            return GetArmorByType(armor);
         }
-        
-        private static IArmor GetArmor(string Armor)
+
+        public static IArmor GetArmorByType(string armorType)
         {
-            switch (Armor)
+            switch (armorType)
             {
                 case "латы":
                     return new Patches();
@@ -65,55 +97,78 @@ namespace Fighters
                 default:
                     return new NoArmor();
             }
-
         }
 
         public static IRace GetRace()
         {
-            Console.WriteLine("Введите расу(человек, эльф, орк): ");
+            Console.WriteLine("Выберите расу (человек, эльф, орк): ");
 
-            string? race = Console.ReadLine().ToLower();
+            string race = Console.ReadLine().ToLower();
             if (string.IsNullOrEmpty(race))
             {
-                Console.WriteLine("Неверный выбор расы, введите заного");
-
-                GetRace();
+                Console.WriteLine("Некорректный выбор расы, попробуйте снова: ");
+                return GetRace();
             }
-            return EnterRace(race);
+            return GetRaceByType(race);
         }
-        private static IRace EnterRace(string Race)
+
+        public static IRace GetRaceByType(string raceType)
         {
-            switch (Race)
+            switch (raceType)
             {
                 case "человек":
                     return new Human();
+                case "эльф":
+                    return new Elf();
                 case "орк":
                     return new Orc();
-                case "эльф":
-                    return new Elf(); 
                 default:
                     return new Human();
             }
+        }
 
+        public static IWeapon GetWeapon()
+        {
+            Console.WriteLine("Выберите оружие (нож, меч): ");
+
+            string weapon = Console.ReadLine().ToLower();
+            if (string.IsNullOrEmpty(weapon))
+            {
+                Console.WriteLine("Некорректный выбор оружия, попробуйте снова: ");
+                return GetWeapon();
+            }
+            return GetWeaponByType(weapon);
+        }
+
+        public static IWeapon GetWeaponByType(string weaponType)
+        {
+            switch (weaponType)
+            {
+                case "нож":
+                    return new Knife();
+                case "меч":
+                    return new Sword();
+                default:
+                    return new NoWeapon();
+            }
         }
 
         public static IClasses GetClasses()
         {
-            Console.WriteLine("Введите класс(разбойник, воин): ");
+            Console.WriteLine("Выберите класс (разбойник, воин): ");
 
-            string? classes = Console.ReadLine().ToLower();
+            string classes = Console.ReadLine().ToLower();
             if (string.IsNullOrEmpty(classes))
             {
-                Console.WriteLine("Неверный выбор класса, введите заного");
-
-                GetClasses();
+                Console.WriteLine("Некорректный выбор класса, попробуйте снова: ");
+                return GetClasses();
             }
-            return EnterClasses(classes);
+            return GetClassByType(classes);
         }
 
-        private static IClasses EnterClasses(string Classes)
+        public static IClasses GetClassByType(string classType)
         {
-            switch (Classes)
+            switch (classType)
             {
                 case "разбойник":
                     return new Rogue();
@@ -122,38 +177,7 @@ namespace Fighters
                 default:
                     return new NoClasses();
             }
-
         }
-
-        public static IWeapon GetWeapon()
-        {
-            Console.WriteLine("Выберите оружие(нож, меч): ");
-            string? weapon = Console.ReadLine().ToLower();
-            if (string.IsNullOrEmpty(weapon))
-            {
-                Console.WriteLine("Неверный выбор оружия введите заного: ");
-                GetWeapon();
-            }
-            return EnterWeapon(weapon);
-        }
-
-        private static IWeapon EnterWeapon(string Weapon)
-        {
-            switch (Weapon) 
-            {
-                case "нож":
-                    return new Knife();
-                case "noweapon":
-                    return new NoWeapon();
-                case "меч":
-                    return new Sword();
-                default:
-                    return new NoWeapon();
-            }
-
-        }
-
-
     }
 
     public class GameMaster
