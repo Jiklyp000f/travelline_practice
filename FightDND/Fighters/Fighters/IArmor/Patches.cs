@@ -4,5 +4,5 @@ public class Patches : IArmor //латы
 {
     public int Armor => 20;
     public int Evasion => 5;
-    public int Health { get; } = 10;
+    public int Health => 10;
 }

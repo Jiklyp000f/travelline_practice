@@ -2,7 +2,6 @@
 using Fighters.Models.Armors;
 using Fighters.Models.Races;
 using Fighters.Models.Weapons;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Fighters.Models.Fighters
 {

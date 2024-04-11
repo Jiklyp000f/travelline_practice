@@ -7,9 +7,10 @@ using Fighters.Models.Weapons;
 
 public class Fighter : IFighter
 {
-
     public int MaxHealth => Race.Health + Classing.Health + Armor.Health;
     public int Evasion => Race.Evasion + Armor.Evasion + Classing.Evasion;
+    public double MaxDamage => GameMaster.BattleRage + Race.Damage + Classing.Damage + Weapon.Damage;
+    public double MinDamage => 0.5 * (Race.Damage + Classing.Damage + Weapon.Damage);
     public int CurrentHealth { get; private set; }
     public string Name { get; }
     public string FullName => $"{Name} - {Race.Name} {Classing.Name}";
@@ -27,10 +28,22 @@ public class Fighter : IFighter
         Classing = classes;
         CurrentHealth = MaxHealth;
     }
+    public int RandomizeDamage()
+    {
+        Random random = new Random();
+
+        double minRange = MinDamage * 0.8; // Урон может быть ниже MinDamage на 20%
+        double maxRange = MaxDamage * 1.1; // Урон может быть выше MaxDamage на 10%
+
+        int minDamageInt = (int)minRange;
+        int maxDamageInt = (int)maxRange;
+
+        return random.Next(minDamageInt, maxDamageInt + 1);
+    }
 
     public int CalculateDamage()
     {
-        return Race.Damage + Classing.Damage + Weapon.Damage;
+        return RandomizeDamage();
     }
 
     public int CalculateProtect()

@@ -2,9 +2,7 @@
 using Fighters.Models.Fighters;
 using Fighters.Models.Races;
 using Fighters.Models.Weapons;
-using System;
 using System.Diagnostics;
-using System.Net.Security;
 
 namespace Fighters
 {
@@ -47,7 +45,7 @@ namespace Fighters
             {
                 Console.WriteLine("Неверный выбор брони, введите заного");
 
-                GetRace();
+                GetArmor();
             }
             return GetArmor(armor);
         }
@@ -160,7 +158,7 @@ namespace Fighters
 
     public class GameMaster
     {
-        private int BattleRage;
+        public static int BattleRage;
         public IFighter PlayAndGetWinner(IFighter firstFighter, IFighter secondFighter)
         {
             int round = 1;
@@ -168,9 +166,10 @@ namespace Fighters
             while (true)
             {
                 Console.ReadLine();
+                BattleRage = round - (round / 2);
                 Console.WriteLine($"Раунд {round++}.\n" +
-                    $"Ярость бойцов увеличивает их урон на {round}");
-                BattleRage = round;
+                    $"Ярость бойцов увеличивает их урон на {BattleRage}");
+                
 
                 // First fights second
                 if (FightAndCheckIfOpponentDead(firstFighter, secondFighter))
@@ -198,11 +197,8 @@ namespace Fighters
             {
                 evasionChance = 100;
             }
-
             int damage = roundOwner.CalculateDamage() - opponent.CalculateProtect();
             if (damage < 1) damage = 1;
-
-          
             if (evasionChance >= 100)
             {
                 Console.WriteLine(
