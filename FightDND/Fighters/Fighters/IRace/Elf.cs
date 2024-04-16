@@ -6,6 +6,7 @@ public class Elf : IRace
     int IRace.Damage => 12;
     int IRace.Health => 100;
     int IRace.Evasion => 7;
+    int IRace.Initiative => 5;
     string IRace.Name { get; } = "Эльф";
 
 }

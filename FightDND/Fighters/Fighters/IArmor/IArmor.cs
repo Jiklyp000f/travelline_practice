@@ -1,10 +1,11 @@
-﻿namespace Fighters.Models.Armors
-{
-    public interface IArmor
-    {
-        int Armor { get; }
+﻿namespace Fighters.Models.Armors;
 
-        int Health {  get; }
-    }
+public interface IArmor
+{
+    int Armor { get; }
+
+    int Evasion {  get; }
+
+    int Health {  get; }
 }
 

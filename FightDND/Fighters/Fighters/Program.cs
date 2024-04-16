@@ -2,213 +2,279 @@
 using Fighters.Models.Fighters;
 using Fighters.Models.Races;
 using Fighters.Models.Weapons;
-using System;
 using System.Diagnostics;
-using System.Net.Security;
 
-namespace Fighters
+namespace Fighters;
+
+public class Program 
 {
-    public class Program
+    public static void Main()
     {
-        public static void Main()
+        List<IFighter> fighters = new List<IFighter>();
+
+        // Запрашиваем количество бойцов
+        Console.WriteLine("Введите количество бойцов: ");
+        int numFighters;
+        while (!int.TryParse(Console.ReadLine(), out numFighters) || numFighters < 2)
         {
-
-            var firstFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor(), GetClasses());
-            Console.WriteLine($"\nПервый боец: {firstFighter.FullName}\n");
-            var secondFighter = new Fighter(GetFighterName(), GetRace(), GetWeapon(), GetArmor(), GetClasses());
-            Console.WriteLine($"\nВторой боец: {secondFighter.FullName}\n");
-
-            var master = new GameMaster();
-            var winner = master.PlayAndGetWinner(firstFighter, secondFighter);
-
-            Console.WriteLine($"Выигрывает  {winner.Name}");
-        }
-        public static string GetFighterName()
-        {
-            Console.WriteLine("Введите имя бойца: ");
-
-            string? fighterName = Console.ReadLine();
-
-            if (string.IsNullOrEmpty(fighterName))
-            {
-                Console.WriteLine("Неверное имя бойца, введите заного: ");
-
-                GetFighterName();
-            }
-
-            return fighterName;
-        }
-        public static IArmor GetArmor()
-        {
-            Console.WriteLine("Введите броню(латы, кожа, кольчуга, ткань): ");
-
-            string? armor = Console.ReadLine().ToLower();
-            if (string.IsNullOrEmpty(armor))
-            {
-                Console.WriteLine("Неверный выбор брони, введите заного");
-
-                GetRace();
-            }
-            return GetArmor(armor);
-        }
-        
-        private static IArmor GetArmor(string Armor)
-        {
-            switch (Armor)
-            {
-                case "латы":
-                    return new Patches();
-                case "кожа":
-                    return new LeatherArmor();
-                case "кольчуга":
-                    return new ChainArmor();
-                case "ткань":
-                    return new FabricArmor();
-                default:
-                    return new NoArmor();
-            }
-
+            Console.WriteLine("Пожалуйста, введите корректное число (минимум 2): ");
         }
 
-        public static IRace GetRace()
+        // Создаем бойцов
+        for (int i = 0; i < numFighters; i++)
         {
-            Console.WriteLine("Введите расу(человек, эльф, орк): ");
-
-            string? race = Console.ReadLine().ToLower();
-            if (string.IsNullOrEmpty(race))
-            {
-                Console.WriteLine("Неверный выбор расы, введите заного");
-
-                GetRace();
-            }
-            return EnterRace(race);
-        }
-        private static IRace EnterRace(string Race)
-        {
-            switch (Race)
-            {
-                case "человек":
-                    return new Human();
-                case "орк":
-                    return new Orc();
-                case "эльф":
-                    return new Elf(); 
-                default:
-                    return new Human();
-            }
-
+            Console.WriteLine($"\nСоздание бойца {i + 1}:");
+            fighters.Add(CreateFighter());
         }
 
-        public static IClasses GetClasses()
+        // Отображаем информацию о бойцах
+        Console.WriteLine("\nБойцы:");
+        foreach (var fighter in fighters)
         {
-            Console.WriteLine("Введите класс(разбойник, воин): ");
-
-            string? classes = Console.ReadLine().ToLower();
-            if (string.IsNullOrEmpty(classes))
-            {
-                Console.WriteLine("Неверный выбор класса, введите заного");
-
-                GetClasses();
-            }
-            return EnterClasses(classes);
-        }
-
-        private static IClasses EnterClasses(string Classes)
-        {
-            switch (Classes)
-            {
-                case "разбойник":
-                    return new Rogue();
-                case "воин":
-                    return new Warrior();
-                default:
-                    return new NoClasses();
-            }
-
-        }
-
-        public static IWeapon GetWeapon()
-        {
-            Console.WriteLine("Выберите оружие(нож, меч): ");
-            string? weapon = Console.ReadLine().ToLower();
-            if (string.IsNullOrEmpty(weapon))
-            {
-                Console.WriteLine("Неверный выбор оружия введите заного: ");
-                GetWeapon();
-            }
-            return EnterWeapon(weapon);
-        }
-
-        private static IWeapon EnterWeapon(string Weapon)
-        {
-            switch (Weapon) 
-            {
-                case "нож":
-                    return new Knife();
-                case "noweapon":
-                    return new NoWeapon();
-                case "меч":
-                    return new Sword();
-                default:
-                    return new NoWeapon();
-            }
-
+            Console.WriteLine($"{fighter.FullName}");
         }
 
 
+        // Начинаем бой
+        var master = new GameMaster();
+        var winner = master.PlayAndGetWinner(fighters);
+
+        Console.WriteLine($"\nПобедитель: {winner.Name}");
     }
 
-    public class GameMaster
+    public static IFighter CreateFighter()
     {
-        private int BattleRage;
-        public IFighter PlayAndGetWinner(IFighter firstFighter, IFighter secondFighter)
+        Console.WriteLine("Введите данные бойца:");
+
+        string name = GetFighterName();
+        IRace race = GetRace();
+        IWeapon weapon = GetWeapon();
+        IArmor armor = GetArmor();
+        IClasses classes = GetClasses();
+
+        return new Fighter(name, race, weapon, armor, classes);
+    }
+
+    public static string GetFighterName()
+    {
+        Console.WriteLine("Введите имя бойца: ");
+
+        string fighterName = Console.ReadLine();
+        if (string.IsNullOrEmpty(fighterName))
         {
-            int round = 1;
-            Console.WriteLine("Нажмите Enter для начала боя");
-            while (true)
-            {
-                Console.ReadLine();
-                Console.WriteLine($"Раунд {round++}.\n" +
-                    $"Ярость бойцов увеличивает их урон на {round}");
-                BattleRage = round;
-
-                // First fights second
-                if (FightAndCheckIfOpponentDead(firstFighter, secondFighter))
-                {
-                    return firstFighter;
-                }
-
-                // Second fights first
-                if (FightAndCheckIfOpponentDead(secondFighter, firstFighter))
-                {
-                    return secondFighter;
-                }
-
-                Console.WriteLine("\nНажмите Enter для перехода в следующий раунд\n");
-            }
-
-            throw new UnreachableException();
+            Console.WriteLine("Некорректное имя, попробуйте снова: ");
+            return GetFighterName();
         }
 
-        private bool FightAndCheckIfOpponentDead(IFighter roundOwner, IFighter opponent)
-        {
-            int damage = roundOwner.CalculateDamage() - opponent.CalculateProtect();
-            if (damage < 1) damage = 1;
-            EvaidRandom();
+        return fighterName;
+    }
 
-            opponent.TakeDamage(damage + BattleRage);
+    public static IArmor GetArmor()
+    {
+        Console.WriteLine("Выберите броню (латы, кожа, кольчуга, ткань): ");
+
+        string armor = Console.ReadLine().ToLower();
+        if (string.IsNullOrEmpty(armor))
+        {
+            Console.WriteLine("Некорректный выбор брони, попробуйте снова: ");
+            return GetArmor();
+        }
+        return GetArmorByType(armor);
+    }
+
+    public static IArmor GetArmorByType(string armorType)
+    {
+        switch (armorType)
+        {
+            case "латы":
+                return new Patches();
+            case "кожа":
+                return new LeatherArmor();
+            case "кольчуга":
+                return new ChainArmor();
+            case "ткань":
+                return new FabricArmor();
+            default:
+                return new NoArmor();
+        }
+    }
+
+    public static IRace GetRace()
+    {
+        Console.WriteLine("Выберите расу (человек, эльф, орк): ");
+
+        string race = Console.ReadLine().ToLower();
+        if (string.IsNullOrEmpty(race))
+        {
+            Console.WriteLine("Некорректный выбор расы, попробуйте снова: ");
+            return GetRace();
+        }
+        return GetRaceByType(race);
+    }
+
+    public static IRace GetRaceByType(string raceType)
+    {
+        switch (raceType)
+        {
+            case "человек":
+                return new Human();
+            case "эльф":
+                return new Elf();
+            case "орк":
+                return new Orc();
+            default:
+                return new Human();
+        }
+    }
+
+    public static IWeapon GetWeapon()
+    {
+        Console.WriteLine("Выберите оружие (нож, меч): ");
+
+        string weapon = Console.ReadLine().ToLower();
+        if (string.IsNullOrEmpty(weapon))
+        {
+            Console.WriteLine("Некорректный выбор оружия, попробуйте снова: ");
+            return GetWeapon();
+        }
+        return GetWeaponByType(weapon);
+    }
+
+    public static IWeapon GetWeaponByType(string weaponType)
+    {
+        switch (weaponType)
+        {
+            case "нож":
+                return new Knife();
+            case "меч":
+                return new Sword();
+            default:
+                return new NoWeapon();
+        }
+    }
+
+    public static IClasses GetClasses()
+    {
+        Console.WriteLine("Выберите класс (разбойник, воин): ");
+
+        string classes = Console.ReadLine().ToLower();
+        if (string.IsNullOrEmpty(classes))
+        {
+            Console.WriteLine("Некорректный выбор класса, попробуйте снова: ");
+            return GetClasses();
+        }
+        return GetClassByType(classes);
+    }
+
+    public static IClasses GetClassByType(string classType)
+    {
+        switch (classType)
+        {
+            case "разбойник":
+                return new Rogue();
+            case "воин":
+                return new Warrior();
+            default:
+                return new NoClasses();
+        }
+    }
+}
+
+public class GameMaster
+{
+    public static int BattleRage;
+    public IFighter PlayAndGetWinner( List<IFighter> fighters )
+    {
+        var survivingFighters = new List<IFighter>( fighters );
+
+        int round = 1;
+        Console.WriteLine( "Нажмите Enter для начала боя" );
+        while ( survivingFighters.Count > 1 )
+        {
+            Console.ReadLine();
+            BattleRage = round - ( round / 2 );
+            Console.WriteLine( $"Раунд {round++}.\n" +
+                              $"Ярость бойцов увеличивает их урон на {BattleRage}" );
+
+            // Перемешаем список бойцов для случайного порядка атаки
+            survivingFighters = ShuffleList( survivingFighters );
+
+            // Создаем список мертвых бойцов
+            var deadFighters = new List<IFighter>();
+
+            foreach ( var attacker in survivingFighters )
+            {
+                // Выбираем случайного противника из оставшихся в живых
+                var defenders = survivingFighters.Where( defender => defender != attacker && !deadFighters.Contains( defender ) ).ToList();
+                if ( defenders.Count == 0 )
+                    continue;
+
+                var defender = defenders[ new Random().Next( defenders.Count ) ];
+
+                if ( FightAndCheckIfOpponentDead( attacker, defender ) )
+                {
+                    deadFighters.Add( defender ); // Помечаем бойца как мертвого
+                }
+            }
+
+            // Удаляем мертвых бойцов из списка выживших
+            foreach ( var deadFighter in deadFighters )
+            {
+                survivingFighters.Remove( deadFighter );
+            }
+
+            Console.WriteLine( "\nНажмите Enter для перехода в следующий раунд\n" );
+        }
+
+        return survivingFighters.FirstOrDefault(); // Возвращаем победителя или null, если не найден
+    }
+    private List<T> ShuffleList<T>( List<T> list )
+    {
+        Random rng = new Random();
+        int n = list.Count;
+        while ( n > 1 )
+        {
+            n--;
+            int k = rng.Next( n + 1 );
+            T value = list[ k ];
+            list[ k ] = list[ n ];
+            list[ n ] = value;
+        }
+        return list;
+    }
+
+    private bool FightAndCheckIfOpponentDead(IFighter roundOwner, IFighter opponent)
+    {
+        
+        int evasionChance = opponent.Evasion + EvaidRandom();
+        if (evasionChance > 100) 
+        {
+            evasionChance = 100;
+        }
+        int damage = roundOwner.CalculateDamage() - opponent.CalculateProtect();
+        if (damage < 1) damage = 1;
+        if (evasionChance >= 100)
+        {
+            Console.WriteLine(
+            $"Боец {opponent.Name} уклоняется от атаки!\n" +
+            $"Количество жизней: {opponent.CurrentHealth}");
+            return false; 
+        }
+      
+        
+            opponent.TakeDamage( damage + BattleRage );
 
             Console.WriteLine(
                 $"Боец {opponent.Name} получает {damage + BattleRage} урона. \n" +
-                $"Количество жизней: {opponent.CurrentHealth}");
+                $"Количество жизней: {opponent.CurrentHealth}" );
+        
 
-            return opponent.CurrentHealth < 1;
-        }
-        public int EvaidRandom() //закончить работу над уклонениями
-        {
-            Random random = new Random();
-            int Evasion = random.Next(0, 11);
-            return Evasion;
-        }
+        return opponent.CurrentHealth < 1;
+    }
+    public int EvaidRandom()
+    {
+        Random random = new Random();
+        int Evasion = random.Next(0, 101);
+        return Evasion;
     }
 }
