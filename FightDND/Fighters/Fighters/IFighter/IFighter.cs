@@ -11,7 +11,7 @@ public interface IFighter
     public int CurrentHealth { get; }
     public int Evasion { get; }
     public int Initiative { get; }
-    public int Crit { get; }
+    public int Crit {  get; }
     public string Name { get; }
     public string FullName { get; }
 
