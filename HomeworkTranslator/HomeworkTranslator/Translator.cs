@@ -9,21 +9,21 @@
 
     public void Run()
     {
-        Console.WriteLine("=== Переводчик ===");
+        Console.WriteLine( "=== Переводчик ===" );
 
-        while (true)
+        while ( true )
         {
-            Console.WriteLine("\nМеню: \n" +
+            Console.WriteLine( "\nМеню: \n" +
                 "1. Добавить перевод\n" +
                 "2. Удалить перевод\n" +
                 "3. Изменить перевод\n" +
                 "4. Перевести слово\n" +
-                "5. Выйти");
+                "5. Выйти" );
 
-            Console.Write("Выберите команду: ");
+            Console.Write( "Выберите команду: " );
             string? choice = Console.ReadLine();
 
-            switch (choice)
+            switch ( choice )
             {
                 case "1":
                     AddTranslation();
@@ -40,7 +40,7 @@
                 case "5":
                     return;
                 default:
-                    Console.WriteLine("Неверная команда. Попробуйте еще раз.");
+                    Console.WriteLine( "Неверная команда. Попробуйте еще раз." );
                     continue;
             }
         }
@@ -48,88 +48,88 @@
 
     private void AddTranslation()
     {
-        Console.Write("Введите слово на русском: ");
+        Console.Write( "Введите слово на русском: " );
         string? word = ReadLineWithCtrlZCheck();
 
-        if (word == null)
+        if ( word == null )
         {
             return;
         }
 
-        Console.Write("Введите перевод на английском: ");
+        Console.Write( "Введите перевод на английском: " );
         string? translation = ReadLineWithCtrlZCheck();
 
-        if (translation == null)
+        if ( translation == null )
         {
             return;
         }
 
-        translations[word] = translation;
+        translations[ word ] = translation;
 
-        Console.WriteLine("Перевод добавлен.");
+        Console.WriteLine( "Перевод добавлен." );
     }
 
     private void RemoveTranslation()
     {
-        Console.Write("Введите слово на русском для удаления перевода: ");
+        Console.Write( "Введите слово на русском для удаления перевода: " );
         string word = Console.ReadLine();
 
-        if (translations.Remove(word))
+        if ( translations.Remove( word ) )
         {
-            Console.WriteLine("Перевод удален.");
+            Console.WriteLine( "Перевод удален." );
         }
         else
         {
-            Console.WriteLine("Перевод для указанного слова не найден.");
+            Console.WriteLine( "Перевод для указанного слова не найден." );
         }
     }
 
     private void ChangeTranslation()
     {
-        Console.Write("Введите слово на русском для изменения перевода: ");
+        Console.Write( "Введите слово на русском для изменения перевода: " );
         string word = Console.ReadLine();
 
-        if (translations.ContainsKey(word))
+        if ( translations.ContainsKey( word ) )
         {
-            Console.Write("Введите новый перевод на английском: ");
+            Console.Write( "Введите новый перевод на английском: " );
             string newTranslation = Console.ReadLine();
 
-            translations[word] = newTranslation;
+            translations[ word ] = newTranslation;
 
-            Console.WriteLine("Перевод изменен.");
+            Console.WriteLine( "Перевод изменен." );
         }
         else
         {
-            Console.WriteLine("Перевод для указанного слова не найден.");
+            Console.WriteLine( "Перевод для указанного слова не найден." );
         }
     }
 
     private void Translate()
     {
-        Console.Write("Введите слово на русском для перевода: ");
+        Console.Write( "Введите слово на русском для перевода: " );
         string word = Console.ReadLine();
 
-        if (translations.TryGetValue(word, out string translation))
+        if ( translations.TryGetValue( word, out string translation ) )
         {
-            Console.WriteLine($"Перевод: {translation}");
+            Console.WriteLine( $"Перевод: {translation}" );
         }
         else
         {
-            Console.WriteLine("Перевод для указанного слова не найден.");
+            Console.WriteLine( "Перевод для указанного слова не найден." );
         }
     }
 
     private string? ReadLineWithCtrlZCheck()
     {
-        if (!Console.KeyAvailable)
+        if ( !Console.KeyAvailable )
         {
             return Console.ReadLine();
         }
 
-        var key = Console.ReadKey(intercept: true).Key;
-        if (key == ConsoleKey.Z && (ConsoleModifiers.Control & ConsoleModifiers.Control) != 0)
+        var key = Console.ReadKey( intercept: true ).Key;
+        if ( key == ConsoleKey.Z && ( ConsoleModifiers.Control & ConsoleModifiers.Control ) != 0 )
         {
-            Console.WriteLine("\nВыход из операции добавления по запросу пользователя.");
+            Console.WriteLine( "\nВыход из операции добавления по запросу пользователя." );
             return null;
         }
 
