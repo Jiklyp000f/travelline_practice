@@ -9,7 +9,7 @@
 
     public void Run()
     {
-        Console.WriteLine( "=== Переводчик ===" );
+        Console.WriteLine("=== Переводчик ===");
 
         while ( true )
         {
