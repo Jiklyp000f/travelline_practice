@@ -6,7 +6,7 @@ public interface IRace
     int Damage { get; }
     int Health { get; }
     int Evasion { get; }
-    int Initiative { get; }
+    int Initiative { get;  }
     string Name { get; }
 }
 

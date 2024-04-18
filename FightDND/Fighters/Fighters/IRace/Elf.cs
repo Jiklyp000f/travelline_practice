@@ -1,4 +1,4 @@
-﻿using Fighters.Models.Races;
+﻿ using Fighters.Models.Races;
 
 public class Elf : IRace
 {

@@ -1,4 +1,4 @@
-﻿
+﻿ 
 using Fighters.Models.Armors;
 using Fighters.Models.Races;
 using Fighters.Models.Weapons;

@@ -188,7 +188,7 @@ public class GameMaster
         var survivingFighters = new List<IFighter>( fighters );
 
         int round = 1;
-        Console.WriteLine( "Нажмите Enter для начала боя" );
+        Console.WriteLine( "Нажмите Enter для начала боя"   );
         while ( survivingFighters.Count > 1 )
         {
             Console.ReadLine();
