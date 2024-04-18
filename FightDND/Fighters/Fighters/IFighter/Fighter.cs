@@ -1,4 +1,4 @@
-﻿ 
+﻿
 using Fighters;
 using Fighters.Models.Armors;
 using Fighters.Models.Fighters;

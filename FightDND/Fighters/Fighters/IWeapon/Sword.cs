@@ -1,4 +1,4 @@
-﻿ using Fighters.Models.Weapons;
+﻿using Fighters.Models.Weapons;
 
 public class Sword : IWeapon
 {

@@ -1,4 +1,4 @@
-﻿ namespace Fighters;
+﻿namespace Fighters;
 
 public class Rogue : IClasses
 {
