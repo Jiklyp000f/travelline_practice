@@ -1,4 +1,6 @@
-﻿class Translator
+﻿using System.Collections.Generic;
+using System;
+class Translator
 {
     private readonly Dictionary<string, string> translations;
 
