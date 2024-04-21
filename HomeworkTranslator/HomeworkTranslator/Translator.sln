@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translator", "Translator.csproj", "{17F8F4DA-1694-4013-8466-D1BD0EDFB0AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17F8F4DA-1694-4013-8466-D1BD0EDFB0AE}.Debug|x86.ActiveCfg = Debug|x86
+		{17F8F4DA-1694-4013-8466-D1BD0EDFB0AE}.Debug|x86.Build.0 = Debug|x86
+		{17F8F4DA-1694-4013-8466-D1BD0EDFB0AE}.Release|x86.ActiveCfg = Release|x86
+		{17F8F4DA-1694-4013-8466-D1BD0EDFB0AE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EBFA7A7-E636-45EE-B851-5E2CBEBF8F37}
+	EndGlobalSection
+EndGlobal
